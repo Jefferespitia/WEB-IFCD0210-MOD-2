@@ -1,15 +1,17 @@
-const createArray = () => [1, 2];
+const createArray = () => [10, 22];
 const createObject = () => ({
-    name: 'Pepe',
+    name: "Pepe",
     age: 2,
-    address: { street: 'c/ Pez', city: 'Soria' },
+    address: { street: "c/ Pez", city: "Soria" },
 });
 
-// const data = createArray()
-// const fist = data[0]
-// const second = data[1]
+// const data1 = createArray()
+// const fist = data1[0]
+// const second = data1[1]
 
 const [fist, second] = createArray();
+// const { name, age, address } = createObject();
+
 const {
     name: userName,
     age,
@@ -18,28 +20,45 @@ const {
 
 console.log(userName, age, street, city);
 
+const user = {
+    id: 1,
+    name: "Pepe",
+    age: 2,
+    address: { street: "c/ Pez", city: "Soria" },
+}
+// const { id, ...userDTO } = user;
+// console.log(id, userDTO);
+// const userDTO = { ...user};
+// delete userDTO.id;
+
+const userDTO = {
+    name: user.name,
+    age: user.age,
+    address: user.address,
+}
+
 /****************************************************/
 
 function makeFoo({ name, age }) {
-    name = 'Rosa';
+    name = "Rosa";
     age = 34;
-    console.log('Desde makeFoo', name, age);
+    console.log("Desde makeFoo", name, age);
 }
 
 const obj = {
-    name: 'Pepe',
+    name: "Pepe",
     age: 2,
-    address: { street: 'c/ Pez', city: 'Soria' },
+    address: { street: "c/ Pez", city: "Soria" },
 };
 
 makeFoo(obj);
-console.log('Original', obj);
+console.log("Original", obj);
 
 function makeFooWithData([a, b]) {
-    console.log('Desde makeFooWithData', a, b);
+    console.log("Desde makeFooWithData", a, b);
 }
 
-makeFooWithData(['Pepe', 'Juan']);
+makeFooWithData(["Pepe", "Juan"]);
 
 const add = (a, b) => a + b;
 

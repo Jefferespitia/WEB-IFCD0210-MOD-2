@@ -18,8 +18,8 @@ const user2 = {
 user.greet();
 user2.greet();
 
-console.log(typeof user);
-console.log(typeof user.address);
+// console.log(typeof user);
+// console.log(typeof user.address);
 
 const user3 = new Object({
     name: 'Pepe',
@@ -37,6 +37,7 @@ const propName = 'name';
 
 console.log(user.name);
 console.log(user[propName]);
+
 {
     const obj = {
         name: 'Pepe',
@@ -52,7 +53,7 @@ console.log(user[propName]);
 }
 {
     let foo;
-    console.log(foo); // ReferenceError: foo is not defined
+    console.log(foo); 
 }
 {
     let baz = {};

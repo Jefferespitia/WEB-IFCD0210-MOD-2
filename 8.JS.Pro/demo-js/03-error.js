@@ -2,7 +2,9 @@ import { errorDivideZero } from './errors.js';
 
 function divide(a, b) {
     if (b === 0) {
-        // const error = new Error('No se puede dividir por 0');
+    // const error = new Error('No se puede dividir por 0');
+    // const error = new Error('No se puede dividir por 0');
+    // throw new Error('No se puede dividir por 0');
         throw errorDivideZero;
     }
     return a / b;

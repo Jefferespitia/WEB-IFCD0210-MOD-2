@@ -23,6 +23,7 @@ const makeBazArrow = (param) => console.log(param);
 // Arrow y objetos
 
 const makeObject = (name, age) => ({ name, age });
+const z = makeObject('Pepe', 22);
 
 const a = { name: 'Pepe', age: 22 };
 const b = a;
@@ -36,11 +37,22 @@ console.log(typeof foo); //undefined
 
 makeBaz('Adios');
 
+// Paso por valor y paso por referencia
+
+
+// Paso por valor: valores primitivos
+
 const modifyValue = (x) => {
-    x = x * 10;
+    x = x * 10; // 220
+    return x 
 };
 
-const modifyObject = ({ ...obj }) => {
+
+const x = 22;
+modifyValue(x); // Argumento pasado por valor 
+console.log(x); // 22
+
+const modifyObject = ({...obj}) => {
     obj.job = 'none';
 };
 
@@ -54,13 +66,8 @@ const user = {
     },
 };
 
-const x = 22;
-
-modifyValue(x);
-console.log(x); // 22
-
 modifyObject(user);
-console.log(user.job); // none
+console.log('user.job:', user.job); // none
 
 {
     const modifyObject = (_obj) => {

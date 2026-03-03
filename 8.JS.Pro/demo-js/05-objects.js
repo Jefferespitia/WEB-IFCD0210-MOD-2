@@ -1,10 +1,10 @@
 const user = {
-    name: 'Pepe',
+    name: "Pepe",
     age: 22,
-    job: 'developer',
+    job: "developer",
     address: {
-        street: 'c/ Pez',
-        city: 'Soria',
+        street: "c/ Pez",
+        city: "Soria",
     },
 };
 
@@ -13,9 +13,9 @@ console.log(Object.values(user));
 console.log(Object.entries(user));
 
 const data = [
-    ['name', 'Juan'],
-    ['age', 28],
-    ['job', 'designer'],
+    ["name", "Juan"],
+    ["age", 28],
+    ["job", "designer"],
 ];
 
 const user2 = Object.fromEntries(data);
@@ -27,7 +27,7 @@ console.log(typeof new Date()); // object
 
 {
     const data = [1, 2, 3];
-    data.prop = 'Estoy en un array';
+    data.prop = "Estoy en un array";
     console.log(data.length);
     data.iterate = () => {
         for (let i = 0; i < data.length; i++) {
@@ -51,13 +51,12 @@ console.log(typeof new Date()); // object
 }
 {
     // string es iterable de lectura
-    const text = 'string es iterable de lectura';
+    const text = "string es iterable de lectura";
     console.log(text[10]);
     // text[10] = 'I';
 }
 {
     // array iterables de lectura y escritura
-
     const data = [1, 2, 3, 4, 5, 6, 7, 8];
     data[5] *= 10;
     console.log(data);
@@ -97,6 +96,8 @@ console.log(typeof new Date()); // object
         const value = i + 1;
         return p + c * value;
     };
+
+    const accumulator = (p, c) => p + c;
 
     const r = data.reduce(reductor);
     console.log(r);

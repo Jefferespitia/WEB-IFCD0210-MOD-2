@@ -35,6 +35,10 @@ console.log(student1, student2); // { name: "Firulais" } { name: "Firulais" }
 student1.name = "Rex";
 console.log(student1, student2); // { name: "Rex" } { name: "Rex" }
 
+
+
+
+
 const student3 = { 
     name: "Firulais",
     grades: [5, 6, 7],
@@ -42,5 +46,12 @@ const student3 = {
         name: "IES Al-Ándalus",
         city: "Sevilla",
     },
+    inscriptionDate: new Date("2023-09-01"),
 };
-const student4 = structuredClone(student3);
+// const student4 = student3 ; 
+// const student4 = { ...student3 }; // Shallow copy using spread operator
+const student5 = structuredClone(student3); // Deep copy using structuredClone 
+// (available in modern browsers and Node.js 17+)
+// const student5 = JSON.parse(JSON.stringify(student3)); // Deep copy using JSON methods
+// student5.inscriptionDate = new Date(student5.inscriptionDate); // Convert string back to Date object
+console.log(student3, student5);

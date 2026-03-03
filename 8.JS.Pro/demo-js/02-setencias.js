@@ -12,7 +12,7 @@ console.log(r.toFixed(2));
 // Unarios
 console.log(!true);
 
-// Binario
+// Binario o duales
 console.log(2 + 2);
 
 // Ternario
