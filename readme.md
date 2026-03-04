@@ -1,0 +1,99 @@
+## Semana 7b (Febrero) - Módulo 2
+
+### Día 4 (J 26/02/2026) - M2.01 01
+
+Review Examen
+
+[Descanso]
+
+- Ejemplo frontend con VITE
+- JS/TS profesional. Entorno
+  - Versiones de NodeJS: actualizar v23.6.0x -> Ejecuta TS
+  - Construcción de un proyecto FRONT: Vite
+  - TypeScript
+  - editorconfig / prettier
+  - Linter
+  - Build
+
+### Día 5 (V 27/02/2026) - M2.03 01
+
+- Despliegue de una aplicación web
+  - GitHub Pages
+  - Netlify atajo: <https://app.netlify.com/drop>
+  - Netlify
+  - Vercel
+
+[Descanso]
+
+- Proyecto Vite [Continuación]
+  - Incorporación de componentes
+  - Review: creación de componentes vanilla JS
+  - MPA: MultiPage Application
+
+## Semana 8 (Marzo)
+
+### Día 1 (02/03/2026) - M2.01 02 - JS
+
+- JS como lenguaje: profundización
+  - Valores. Variables y tipos
+  - Modelo mental
+  - Constantes: const + Object.freeze()
+- Comparación con Typescript
+  - Inferencia de tipos
+  - Constantes: as const
+
+[Descanso]
+
+- Casting y coerción
+- Operadores de paso: && (paso true) - || (paso false) - ?? (paso nullish)
+  - Otros operadores (.? - !)
+- Expresiones y sentencias. Funciones
+- Sentencias: Flujo del código.
+  - Condicionales. Operador ternario
+- Objetos en JS. Arrays
+  - Valores primitivos: inmutabilidad
+  - Objetos: instancias y mutabilidad
+    - Clonado de objetos
+    - Acceso a propiedades
+    - Iteración: for - in
+
+### Día 2 (03/03/2026) - M2.01 03 - JS
+
+- Objetos en JS (continuación)
+  - Métodos de instancia
+  - Tipos primitivos y objetos. Métodos de string
+  - Arrays
+- Errores
+
+[Descanso]
+
+- Funciones
+  - Parámetros primitivos v. objeto
+- Desestructuración
+  - En declaración de variables y parámetros
+  - Operador spreed
+  - Operador rest (parámetros)
+- Objetos en JS. Literales
+  - Prototype (\_\_proto\_\_)
+
+### Día 3 (04/03/2026) - M2.01 04 - JS (OOP)
+
+- Objetos en JS. Literales (continuación)
+  - Prototype shadowing
+  - Prototype pollution
+- Elementos de FP (Functional Programming) en JS
+  - Funciones y propiedades
+  - Funciones anidadas
+  - HOF
+
+[Descanso]
+
+- Elementos de FP (Functional Programming) en JS
+  - IIFE
+  - Closures
+- Módulos ES6 (review)
+- Patrones de ejecución. This
+
+<!-- - OOP: Creación de Objetos
+  - Constructor: "clases".
+  - Constructores y miembros estáticos -->
