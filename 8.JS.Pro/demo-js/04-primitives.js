@@ -14,3 +14,9 @@ assignProp(22n); // Cannot create property 'prop' on bigint '22'
 assignProp(Symbol('s')); // Cannot create property 'prop' on symbol 'Symbol(s)'
 assignProp(undefined); // Cannot set properties of undefined (setting 'prop')
 assignProp(null); // Cannot set properties of null (setting 'prop')
+
+
+const x = 22
+//const message = 'El valor de x es ' + x;
+const message = `El valor de x es ${x}`;
+console.log(message);
