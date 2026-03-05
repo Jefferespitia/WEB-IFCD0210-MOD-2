@@ -1,32 +1,12 @@
-function calcularTotal(precio, iva) {
-    const montoIva = precio * (iva / 100);
-    const precioFinal = precio + montoIva;
-    console.log("Precio original: $" + precio);
-    console.log("IVA (" + iva + "%): $" + montoIva);
-    console.log("Precio final: $" + precioFinal);
-}
-calcularTotal(100, 21);
+import { InfoEmpresa, Cliente, Producto, Invoice } from "./class.js";
 
+const empresa = new InfoEmpresa("Tech Solutions", "Calle Mayor 10", "123456789", "A12345678");
+const cliente = new Cliente("Juan Pérez", "Av. Libertad 25", "987654321", "B87654321");
+const producto1 = new Producto("Laptop", 1200, 5);
+const producto2 = new Producto("Ratón", 20, 2);
 
+const factura = new Invoice(empresa, cliente, 21, "Transferencia");
+factura.agregarProducto(producto1);
+factura.agregarProducto(producto2);
 
-class factura {
-    constructor(numero, cliente, productos) {
-        this.numero = numero;
-        this.cliente = cliente;
-        this.productos = productos;
-    }
-    mostrarInfo() {
-        console.log(`Número de factura: ${this.numero}`);
-        console.log(`Cliente: ${this.cliente.nombre}`);
-        console.log("Productos:");
-        this.productos.forEach((producto, index) => {
-            console.log(`${index + 1}. ${producto.nombre} - $${producto.precio.toFixed(2)} x ${producto.cantidad}`);
-        });
-    }
-}
-
-const factura1 = new factura("F001", cliente1, [producto1]);
-factura1.mostrarInfo();
-
-
-
+factura.mostrarFactura();   

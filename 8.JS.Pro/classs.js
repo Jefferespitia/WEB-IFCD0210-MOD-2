@@ -1,4 +1,6 @@
-export class InfoEmpresa {
+
+
+export class Empresa {
     #nombre;
     #direccion;
     #telefono;
@@ -10,11 +12,9 @@ export class InfoEmpresa {
         this.#telefono = telefono;
         this.#nif = nif;
     }
-    info() {
-        console.log(`Nombre: ${this.#nombre}`);
-        console.log(`Dirección: ${this.#direccion}`);
-        console.log(`Teléfono: ${this.#telefono}`);
-        console.log(`NIF: ${this.#nif}`);
+
+    getInfo() {
+        return `${this.#nombre} Dirección: ${this.#direccion} Teléfono: ${this.#telefono}NIF: ${this.#nif}`;
     }
 }
 
@@ -30,39 +30,36 @@ export class Cliente {
         this.#telefono = telefono;
         this.#nif = nif;
     }
-    info() {
-        console.log(`Nombre: ${this.#nombre}`);
-        console.log(`Dirección: ${this.#direccion}`);
-        console.log(`Teléfono: ${this.#telefono}`);
-        console.log(`NIF: ${this.#nif}`);
+
+    getInfo() {
+        return `${this.#nombre} Dirección: ${this.#direccion} Teléfono: ${this.#telefono} NIF: ${this.#nif}`;
     }
 }
 
-export class Producto {
-    #nombre;
+export class Item {
+    #descripcion;
     #precio;
     #cantidad;
 
-    constructor(nombre, precio, cantidad) {
-        this.#nombre = nombre;
+    constructor(descripcion, precio, cantidad) {
+        this.#descripcion = descripcion;
         this.#precio = precio;
         this.#cantidad = cantidad;
     }
 
-    subtotal () {
+    getSubtotal() {
         return this.#precio * this.#cantidad;
     }
-    info() {
-        console.log(`Nombre: ${this.#nombre}`);
-        console.log(`Precio: $${this.#precio}`);
-        console.log(`Cantidad: ${this.#cantidad}`);
+
+    getInfo() {
+        return `${this.#descripcion} - ${this.#cantidad} x ${this.#precio}€ = ${this.getSubtotal()}€`;
     }
 }
 
 export class Invoice {
     #empresa;
     #cliente;
-    #productos;
+    #items;
     #importeTotal;
     #tipoIVA;
     #formaPago;
@@ -70,15 +67,26 @@ export class Invoice {
     constructor(empresa, cliente, tipoIVA, formaPago) {
         this.#empresa = empresa;
         this.#cliente = cliente;
-        this.#productos = [];
+        this.#items = [];
         this.#importeTotal = 0;
         this.#tipoIVA = tipoIVA;
         this.#formaPago = formaPago;
     }
 
-    agregarProducto(producto) {
-        this.#productos.push(producto);
-        this.#importeTotal += producto.subtotal();
+    agregarItem(item) {
+        this.#items.push(item);
+    }
+
+    #calcularImporteTotal() {
+        let subtotal = 0;
+        for (let item of this.#items) {
+            subtotal += item.getSubtotal();
+        }
+        this.#importeTotal = subtotal + (subtotal * this.#tipoIVA / 100);
+    }
+
+    calcular() {
+        this.#calcularImporteTotal();
     }
 
     mostrarImporteTotal() {
@@ -86,20 +94,22 @@ export class Invoice {
     }
 
     mostrarFactura() {
+        this.#calcularImporteTotal();
+
+        console.log("===== FACTURA =====");
         console.log("EMPRESA:");
-        (this.#empresa.info());
- 
+        console.log(this.#empresa.getInfo());
+
         console.log("CLIENTE:");
-        (this.#cliente.info());
- 
+        console.log(this.#cliente.getInfo());
+
         console.log("DETALLE:");
-        this.#productos.forEach(producto => {
-        (producto.info());
+        this.#items.forEach(item => {
+            console.log(item.getInfo());
         });
- 
+
         console.log(`IVA: ${this.#tipoIVA}%`);
         console.log(`Forma de pago: ${this.#formaPago}`);
         console.log(`TOTAL: ${this.#importeTotal}€`);
     }
 }
-
