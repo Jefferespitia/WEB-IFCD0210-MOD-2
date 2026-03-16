@@ -209,32 +209,27 @@ Review Examen
 
 ### Día 5 (13/03/2026) - M2.01 11 - ?
 
-<!-- 
-- Detalles OOP - Tipos
-  - Extensiones de VSCode para TS
-  - Type queries
-  - Utility types
-  - Mixins
-
-- Practica: Repositorio genérico
-  (Abstracción: patrón Repository)
-  - interfaz TypeODM ... app.d.ts
-  - file system mock
-  - implementación de la interfaz: clase ODMLite
-  - test de la implementación 
-
--->
-
-
+- Practica: Figuras geométricas
+  - Herencia
+  - Interfaces
+- Test
+  - node:test / node:assert
 
 ## Semana 10 (Marzo)
 
 ### Día 1 (16/03/2026) - M2.01 12 - Node / FS
 
-### Día 2 (17/03/2026) - M2.01 13 - Node (CLI)
+- NodeJS
+  - Nuevo proyecto desde cero
+    - TS
+    - ESLint
+  - Introducción. Elementos de NodeJS. NPM
 
-### Día 3 (18/03/2026) - M2.01 14 - Node (Servidor)
+[Descanso]
 
-### Día 4 (19/03/2026) - M2.01 15 - Node + Express
-
-### Día 1 (20/03/2026) - M2.01 16 - Node + Express
+- Módulos. ESM. Módulos del core de Node
+- Entorno de ejecución
+  - global
+  - process
+  - variables de entorno. dotenv
+  - .env.SAMPLE
