@@ -233,3 +233,37 @@ Review Examen
   - process
   - variables de entorno. dotenv
   - .env.SAMPLE
+### Día 2 (17/03/2026) - M2.01 13 - Node (CLI)
+
+- Linea de comandos
+  - stdin / stdout
+  - Eventos
+  - Streams
+
+- Asincronía en NodeJS
+  - Callbacks
+  - Event Loop
+  - Promesas
+
+- FILE System
+  - readFileSync
+  - readFile
+  - fs/promises: readFile
+
+[Descanso]
+
+- File System
+  - / writeFileSync
+  - / writeFile
+
+- NodeJS: CLI + FS
+  - input
+  - save as JSON
+
+- CLI: librerías (minimist, yargs, commander)
+
+- Creación de un CLI - CRUD
+  - Entity
+  - Interface de operaciones
+
+### Día 3 (18/03/2026) - M2.01 14 - Node (Servidor)
