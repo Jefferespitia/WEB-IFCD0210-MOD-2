@@ -267,3 +267,46 @@ Review Examen
   - Interface de operaciones
 
 ### Día 3 (18/03/2026) - M2.01 14 - Node (Servidor)
+
+<!--
+- Creación de un CLI - CRUD
+  - Patrón repository
+  - Persistencia en ficheros json
+- CLI Wizard: Inquirer
+-->
+
+<!--
+- Eventos (?)
+- Streams (?)
+- Servidores Web: Node Http server
+  - Conceptos
+  - Creación de un servidor
+  - Ajustes del entorno
+  - Mejoras en el servidor
+-->
+
+### Día 4 (19/03/2026) - M2.01 15 - Node + Express
+
+<!-- Servidores Web: Node + Express
+
+- Separación de responsabilidades: server v. app
+- Rutas (method / url) y controladores
+- Middleware: custom (logger) y de terceros (morgan)
+- Cors -->
+
+### Día 1 (20/03/2026) - M2.01 16 - Node + Express
+
+<!-- Servidores Web: Node + Express
+
+- Cors (continuación)
+- Error Handler
+- Elementos estáticos
+- Templating (Vistas ES6)
+- Rutas y controladores
+-->
+
+<!-- - Templating (Vistas ES6)
+  - Tagged templates
+- Práctica: Servidores Web: Node + Express -->
+
+## Semana 11 (Marzo)
