@@ -16,7 +16,6 @@
     "type": "module",
     "dependencies": {
         "cross-env": "^10.1.0"
-  
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",

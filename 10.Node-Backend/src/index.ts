@@ -4,10 +4,11 @@ import { createServer, IncomingMessage , ServerResponse} from "node:http";
 const PORT = Number(process.env.PORT || 3000);
 
 const app = (request: IncomingMessage, response: ServerResponse) => {
+try {
     console.log(request.url, request.method);
     console.log(request.headers);
 
-try {
+
 
 const notes = [
     {
@@ -37,13 +38,6 @@ const notes = [
     return
 }
 
-    if (request.method==="POST") {
-        response.statusCode = 201;
-        response.setHeader("Content-Type", "text/html; charset=utf-8");
-        response.end("Hello world");    
-    return
-};
-
 if (request.method==="POST") {
     response.statusCode = 201;
 }
@@ -51,12 +45,13 @@ if (request.method==="POST") {
 switch (request.url) {
     case "/":
         response.setHeader("Content-Type", "text/html; charset=utf-8");
-        response.end("Hello world");
+        response.end('<p>¡¡Hola bienvenidos al servidor!!😍😍</p>');
         break;
 
     case "/notes":
         response.setHeader("Content-Type", "application/json");
         response.write(JSON.stringify(notes));
+       // response.write(notes);
         response.end();
         break;
 
