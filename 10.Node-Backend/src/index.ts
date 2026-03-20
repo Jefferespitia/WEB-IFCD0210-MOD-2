@@ -3,13 +3,6 @@ import { createServer, IncomingMessage , ServerResponse} from "node:http";
 
 const PORT = Number(process.env.PORT || 3000);
 
-const app = (request: IncomingMessage, response: ServerResponse) => {
-try {
-    console.log(request.url, request.method);
-    console.log(request.headers);
-
-
-
 const notes = [
     {
         id: 1,
@@ -30,6 +23,15 @@ const notes = [
         important: true
     }
 ];
+
+const app = (request: IncomingMessage, response: ServerResponse) => {
+try {
+    console.log(request.url, request.method);
+    console.log(request.headers);
+
+
+
+
 
 
     if (request.method==="PUT") {
