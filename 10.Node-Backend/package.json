@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "cross-env NODE_ENV=prod node ./src/cli-demo.ts",
-        "dev": "cross-env NODE_ENV=dev node --watch --env-file=.env ./src/index.ts",
+        "dev": "cross-env NODE_ENV=dev DEBUG=10-back* node --watch --env-file=.env ./src/index2.ts",
         "test:fail": "echo \"Error: no test specified\" && exit 1",
         "test:success": "echo \"Mock Test success\" && exit 0",
         "test": "cross-env NODE_ENV=test node --env-file=.env.test node --test"

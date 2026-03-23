@@ -1,7 +1,16 @@
+import { App } from './core/components/app/app.wc';
+import { navigate } from './core/router/router';
 
-import { App } from "./core/components/app/app.wc"
+console.log('Load main');
 
-console.log('Load main')
+// Componente app
+App.render();
 
-App.render()
-
+// Router
+history.replaceState({ url: 'start' }, '', location.pathname);
+navigate(location.pathname);
+window.addEventListener('popstate', (event) => {
+    console.log('Popstate', event);
+    console.log('Current location', location.pathname);
+    navigate(location.href, false);
+});

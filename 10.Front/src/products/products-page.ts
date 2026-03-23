@@ -1,47 +1,37 @@
-import { Counter } from "../counter/counter2";
-import { Footer } from "../footer-wc/footer";
 
-export class App extends HTMLElement {
-    static #selector = "app-root"
+
+export class ProductsPage extends HTMLElement {
+    static #selector = 'app-products-page';
     static render() {
-        // const el = document.querySelector(App.#selector) as HTMLElement
-        // const newElement = new AppComponent()
-        // el.replaceWith(newElement.#element)
-        customElements.define(App.#selector, App)
-        Footer.render()
-        Counter.render()
+        // Prepare main
+        const el: HTMLElement | null = document.querySelector('main');
+        if (el === null) {
+            throw new Error('Selector main no disponible');
+        }
+        el.innerHTML = `<${ProductsPage.#selector}></${ProductsPage.#selector}>`;
+        // Register custom element
+        customElements.define(ProductsPage.#selector, ProductsPage);
+        // Render child custom elements
     }
 
     #template!: string;
-    // #element!: HTMLElement
 
-    constructor () {
-        super()
-        this.#setTemplate()
-        this.#setElement()
-
+    constructor() {
+        super();
+        this.#setTemplate();
+        this.#setElement();
     }
 
     #setTemplate() {
-        this.#template =   /*html*/`
-        <main>
-            <p>Uso de componentes y web components</p>
-            <app-counter counterId="1" ></app-counter>
-            <app-counter counterId="2"></app-counter>
-            <app-counter counterId="3"></app-counter>
-        </main>
-         <app-footer></app-footer>
-        `
+        this.#template = /*html*/ `
+            <section>
+                <h2>Products</h2>
+                <p>Aquí irán los productos</p>
+            </section>
+        `;
     }
-
 
     #setElement() {
-        // this.#element =document.createElement("app-root")
-        // console.log(this.#element)
-        this.innerHTML = this.#template
-
+        this.innerHTML = this.#template;
     }
 }
-
-
-
