@@ -1,4 +1,6 @@
 import { createServer, IncomingMessage , ServerResponse} from "node:http";
+import { readFile } from "fs/promises";
+import  serveStatic from "serve.static"; 
 
 
 const PORT = Number(process.env.PORT || 3000);
@@ -45,9 +47,10 @@ if (request.method==="POST") {
 }
 
 switch (request.url) {
-    case "/":
+    case "/api":
+        const html = await readFile("./src/index.html", {encoding: "utf-8"})
         response.setHeader("Content-Type", "text/html; charset=utf-8");
-        response.end('<p>¡¡Hola bienvenidos al servidor!!😍😍</p>');
+        response.end(html);
         break;
 
     case "/notes":
