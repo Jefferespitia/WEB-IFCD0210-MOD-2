@@ -308,7 +308,7 @@ Sesión anticipadas del módulo 3
   - proyecto vite
   - componentes funcionales en vanilla TS
 
-### Día 5 (20/03/2026)  - M2.03 02 - Frontend OOP
+### Día 5 (20/03/2026) - M2.03 02 - Frontend OOP
 
 Sesión anticipadas del módulo 3
 
@@ -327,7 +327,7 @@ Sesión anticipadas del módulo 3
 
 ## Semana 11 (Marzo)
 
-### Día 1 (23/03/2026) - M2.02 03 
+### Día 1 (23/03/2026) - M2.02 03
 
 Sesión anticipadas del módulo 3
 
@@ -341,36 +341,38 @@ Sesión anticipadas del módulo 3
 
 - Revisión del ejercicio
 
-<!-- 
 - Publicación en el servidor de Node
   - Páginas estáticas
+    - Librería: serve-static -> middleware
   - SPA
   - API
--->
+
+- Logger: Debug
 
 ### Día 2 (24/03/2026) - M2.01 15 - Node + Express
 
-<!-- Servidores Web: Node + Express
+-- Servidores Web: Node + Express
 
 - Separación de responsabilidades: server v. app
 - Rutas (method / url) y controladores
 - Middleware: custom (logger) y de terceros (morgan)
-- Cors 
--->
+- Cors
+- Error Handler
+  - clase HttpError
+- Middleware nativos de Express
+  - json()
+  - urlencoded()
+  - static: elementos estáticos()
+- Mejoras del server
+  - Listen info
 
 ### Día 3 (25/03/2026) - M2.01 16 - Node + Express
 
 <!-- Servidores Web: Node + Express
-
-- Cors (continuación)
-- Error Handler
-- Elementos estáticos
-- Templating (Vistas ES6)
-- Rutas y controladores
--->
-
-<!-- - Templating (Vistas ES6)
+  - Validaciones: Zod
+  - Templating (Vistas ES6)
   - Tagged templates
+  - Rutas y controladores
 - Práctica: Servidores Web: Node + Express -->
 
 ## Unidad 2
@@ -472,7 +474,6 @@ Bases de datos MySQL
 ## Día 4 (9/04/2026) - M2.02 07 - DB (Ejemplos)
 
 - Review conceptos de diseño de bases de datos.
-
   - Un sistema para gestionar una biblioteca
   - Un sistema para gestionar venta de billetes de avión
     - usuario
@@ -495,7 +496,6 @@ Bases de datos MySQL
 Tipos de datos
 
 - DDL => CREATE, ALTER, DROP
-
   - Conexión: Shell v. Workbench (GUI)
   - Listado y Creación de bases de datos. Uso
   - Listado y descripción de tablas
@@ -533,4 +533,4 @@ Tipos de datos
 
 ## Semana 13 (Abril)
 
-## Día 1 (13/04/
+## Día 1 (13/04/2026) - M2.02 09
