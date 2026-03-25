@@ -1,23 +1,22 @@
-import { Theme } from '../theme.ts';
+import { Theme } from '../theme/theme.wc';
+import './header.css';
 
 export class Header extends HTMLElement {
     static #selector = 'app-header';
     static render() {
-        document
-            .querySelectorAll(Header.#selector)
-            .forEach((el) => el.replaceWith(new Header()));
+        customElements.define(Header.#selector, Header);
         Theme.render();
     }
 
     #template!: string;
 
     constructor() {
-        super()
-        this.setTemplate();
-        this.setElement()
+        super();
+        this.#setTemplate();
+        this.#setElement();
     }
 
-    setTemplate() {
+    #setTemplate() {
         this.#template =
             /*html*/
             `<header class="header">
@@ -35,11 +34,7 @@ export class Header extends HTMLElement {
     `;
     }
 
-    setElement() {
-        // const parentElement = document.createElement('parent');
-        // parentElement.innerHTML = template;
-        // const element = parentElement.firstElementChild;
-        // return element;
-        this.innerHTML = this.#template
+    #setElement() {
+        this.innerHTML = this.#template;
     }
 }

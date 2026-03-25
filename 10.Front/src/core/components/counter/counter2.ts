@@ -1,5 +1,4 @@
-
-// import './footer.css'
+import './counter.css';
 
 interface Props {
     counterId: string
