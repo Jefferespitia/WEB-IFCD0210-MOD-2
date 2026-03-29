@@ -4,7 +4,8 @@
         "useDefineForClassFields": true,
         "module": "ESNext",
         "lib": ["ES2022", "DOM", "DOM.Iterable"],
-        "types": ["vite/client"],
+      
+        //"types": ["vite/client"],
         "skipLibCheck": true,
 
         /* Bundler mode */
@@ -22,10 +23,11 @@
         "noFallthroughCasesInSwitch": true,
         "noUncheckedSideEffectImports": true,
 
+        "baseUrl": ".",   // 👈 🔥 ESTO ES LO QUE FALTA        
         /* Paths */
         "paths": {
             "@/*": ["./src/*"],
         }
     },
-    "include": ["src"]
+    "include": ["src", "vite-env.d.ts"],
 }

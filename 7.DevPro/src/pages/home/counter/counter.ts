@@ -1,4 +1,4 @@
-import "./counter.css";
+import "../counter/counter.css";
 
 /*
     Vanilla Component
